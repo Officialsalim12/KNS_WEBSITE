@@ -1,0 +1,13 @@
+# Netlify configuration for Next.js 14
+# Docs: https://docs.netlify.com/integrations/frameworks/next-js/overview/
+
+[build]
+  command = "npm run build"
+  # The Next.js plugin manages functions and routing; publish can remain .next
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

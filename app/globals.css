@@ -48,12 +48,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #E0B0FF;
+  background: #0066CC;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C895E8;
+  background: #0052A3;
 }
 
 /* Hero Slider Animation */
@@ -76,6 +76,29 @@ html {
   flex: 0 0 10%;
   width: 10%;
   height: 100%;
+  overflow: hidden;
+}
+
+.hero-slide img {
+  transform: scale(1.3);
+  object-position: center center;
+}
+
+/* Blog Images - Crop to hide watermarks */
+.blog-image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.blog-image-container img {
+  transform: scale(1.4);
+  object-position: center center;
+}
+
+/* Blog detail hero image - crop more aggressively */
+.blog-hero-image img {
+  transform: scale(1.5);
+  object-position: center center;
 }
 
 @keyframes slideLeft {
@@ -85,5 +108,23 @@ html {
   100% {
     transform: translateX(-50%);
   }
+}
+
+/* Partners Logo Scrolling Animation */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scrollLeft 30s linear infinite;
+  display: flex;
+  width: fit-content;
+  min-height: 160px;
+  align-items: center;
 }
 

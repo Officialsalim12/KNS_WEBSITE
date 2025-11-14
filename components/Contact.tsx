@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { Mail, PhoneCall, MapPin, Send } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Contact() {
@@ -104,7 +104,19 @@ export default function Contact() {
                 className="w-full px-6 py-3 bg-mauve text-white rounded-lg font-semibold hover:bg-mauve-dark transition-colors duration-300 flex items-center justify-center gap-2"
               >
                 Send Message
-                <Send size={20} />
+                <span className="relative w-5 h-5">
+                  <img
+                    src="/icons/send-icon.svg"
+                    alt="Send"
+                    className="w-5 h-5 object-contain"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none'
+                      const fallback = e.currentTarget.nextElementSibling as HTMLElement
+                      if (fallback) fallback.style.display = 'block'
+                    }}
+                  />
+                  <Send size={20} style={{ display: 'none' }} />
+                </span>
               </button>
             </form>
           </motion.div>
@@ -121,8 +133,18 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-charcoal mb-6">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-mauve-light rounded-lg">
-                    <Mail className="text-mauve" size={24} />
+                  <div className="p-3 bg-mauve-light rounded-lg relative w-12 h-12 flex items-center justify-center">
+                    <img
+                      src="/icons/email-icon.svg"
+                      alt="Email"
+                      className="w-6 h-6 object-contain"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none'
+                        const fallback = e.currentTarget.nextElementSibling as HTMLElement
+                        if (fallback) fallback.style.display = 'block'
+                      }}
+                    />
+                    <Mail className="text-mauve" size={24} style={{ display: 'none' }} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-charcoal mb-1">Email</h4>
@@ -130,8 +152,18 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-mauve-light rounded-lg">
-                    <Phone className="text-mauve" size={24} />
+                  <div className="p-3 bg-mauve-light rounded-lg relative w-12 h-12 flex items-center justify-center">
+                    <img
+                      src="/icons/phone-icon.svg"
+                      alt="Phone"
+                      className="w-6 h-6 object-contain"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none'
+                        const fallback = e.currentTarget.nextElementSibling as HTMLElement
+                        if (fallback) fallback.style.display = 'block'
+                      }}
+                    />
+                    <PhoneCall className="text-mauve" size={24} style={{ display: 'none' }} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-charcoal mb-1">Phone</h4>
@@ -140,8 +172,18 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-mauve-light rounded-lg">
-                    <MapPin className="text-mauve" size={24} />
+                  <div className="p-3 bg-mauve-light rounded-lg relative w-12 h-12 flex items-center justify-center">
+                    <img
+                      src="/icons/location-icon.svg"
+                      alt="Location"
+                      className="w-6 h-6 object-contain"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none'
+                        const fallback = e.currentTarget.nextElementSibling as HTMLElement
+                        if (fallback) fallback.style.display = 'block'
+                      }}
+                    />
+                    <MapPin className="text-mauve" size={24} style={{ display: 'none' }} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-charcoal mb-1">Address</h4>

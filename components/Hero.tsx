@@ -6,13 +6,27 @@ import { ArrowRight, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Hero() {
-  // 5 images for the slider - using Unsplash images with tech/IT themes
+  // 5 images for the slider - one for each service, featuring black professionals
+  // Images are matched to services based on the provided image descriptions:
+  // 1. IT Consultancy & Software Solutions - Black professionals group high-five in office
+  // 2. Cybersecurity Solutions - Black man with cybersecurity digital interface
+  // 3. IT Training & Courses - Black man smiling in computer lab/classroom
+  // 4. Telecommunications Solutions - Hands with smartphone and network overlay
+  // 5. Enterprise & Cloud Solution - Black man in data center with laptop
+  // 
+  // Add your image files to /public/hero-images/ folder with these names:
+  // - hero-1-it-consultancy.jpg (or .png, .webp)
+  // - hero-2-cybersecurity.jpg
+  // - hero-3-training.jpg
+  // - hero-4-telecommunications.jpg
+  // - hero-5-cloud.jpg
+  // - hero-6-call-center.jpg
   const heroImages = [
-    'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80', // Tech meeting
-    'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80', // Data center
-    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80', // Cybersecurity
-    'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=80', // Cloud computing
-    'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80', // IT training
+    '/hero-images/hero-1-it-consultancy.webp', // IT Consultancy & Software Solutions - Black professionals group high-five
+    '/hero-images/hero-2-cybersecurity.webp', // Cybersecurity Solutions - Black man with cybersecurity interface
+    '/hero-images/hero-3-training.jpg', // IT Training & Courses - Black man in computer lab
+    '/hero-images/hero-4-telecommunications.jpg', // Telecommunications Solutions - Smartphone with network overlay
+    '/hero-images/hero-5-cloud.png', // Enterprise & Cloud Solution - Black man in data center
   ]
 
   // Duplicate images for seamless infinite loop (10 total: 5 + 5)

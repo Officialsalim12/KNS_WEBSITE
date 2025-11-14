@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        mauve: '#E0B0FF',
-        'mauve-dark': '#C895E8',
-        'mauve-light': '#F0D5FF',
+        mauve: '#0066CC',
+        'mauve-dark': '#0052A3',
+        'mauve-light': '#3385D6',
         charcoal: '#333333',
       },
       fontFamily: {

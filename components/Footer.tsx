@@ -1,9 +1,12 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
+import { useState } from 'react'
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
+  const [logoError, setLogoError] = useState(false)
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
@@ -39,9 +42,24 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">KNS</h3>
+            {logoError ? (
+              <div className="text-2xl font-bold text-white mb-4">
+                KNS
+              </div>
+            ) : (
+              <div className="relative h-12 w-32 mb-4">
+                <Image
+                  src="/IMG_2498-removebg-preview.png"
+                  alt="KNS Logo"
+                  fill
+                  className="object-contain"
+                  sizes="128px"
+                  onError={() => setLogoError(true)}
+                />
+              </div>
+            )}
             <p className="text-white/80 leading-relaxed">
-              KNS - Sierra Leone
+              Knowledge Network Solutions - Sierra Leone
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (

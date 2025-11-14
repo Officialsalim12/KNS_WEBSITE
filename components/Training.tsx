@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Brain, Handshake, Database, Code2, BarChart3, Shield, ArrowRight } from 'lucide-react'
+import { Brain, Handshake, Database, Code, TrendingUp, ShieldCheck, ArrowRight } from 'lucide-react'
 
 export default function Training() {
   const trainingAreas = [
@@ -22,17 +22,17 @@ export default function Training() {
       description: 'Comprehensive training on SAP HANA database implementation and management.',
     },
     {
-      icon: Code2,
+      icon: Code,
       title: 'Software Engineering',
       description: 'Advanced software engineering practices and methodologies.',
     },
     {
-      icon: BarChart3,
+      icon: TrendingUp,
       title: 'Data Analysis',
       description: 'Expert-level data analysis and visualization techniques.',
     },
     {
-      icon: Shield,
+      icon: ShieldCheck,
       title: 'Cybersecurity Implementation',
       description: 'Hands-on cybersecurity implementation and best practices.',
     },

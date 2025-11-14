@@ -1,9 +1,8 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
-import fs from 'fs'
-import path from 'path'
 import Link from 'next/link'
+import GalleryAwards from '@/components/GalleryAwards'
 
 interface EventInfo {
   image: string
@@ -84,25 +83,13 @@ const eventData: EventInfo[] = [
     image: 'WhatsApp Image 2025-11-06 at 4.54.08 PM (1).jpeg',
     eventName: 'Enterprise Solutions Showcase',
     description: 'Demonstrating cutting-edge enterprise IT solutions and telecommunications services.',
-    socialLink: 'https://facebook.com/your-page' // Update with your actual link
+    socialLink: 'https://facebook.com/your-page'
   }
 ]
 
 export default function GalleryPage() {
-  const galleryDir = path.join(process.cwd(), 'public', 'gallery')
-  let images: string[] = []
-
-  try {
-    images = fs
-      .readdirSync(galleryDir)
-      .filter((file) => /\.(png|jpe?g|webp|gif|svg)$/i.test(file))
-      .sort()
-  } catch (e) {
-    images = []
-  }
-
-  // Match images with event data
-  const galleryItems = eventData.filter(event => images.includes(event.image))
+  // Use all event data as gallery items
+  const galleryItems = eventData
 
   return (
     <main className="min-h-screen">
@@ -111,6 +98,15 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-4">Gallery</h1>
+            <p className="text-lg text-gray-600">Highlights from our events and activities</p>
+          </div>
+
+          {/* Awards Section */}
+          <GalleryAwards />
+
+          {/* Gallery Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Event Gallery</h2>
             <p className="text-lg text-gray-600">Highlights from our events and activities</p>
           </div>
 
