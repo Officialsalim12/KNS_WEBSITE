@@ -2,7 +2,7 @@
 
 A professional and responsive website for **KNS (Knowledge Network Systems)** built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**.
 
-## 🚀 Features
+## Features
 
 - **Hero Section** with 5-image sliding animation (left to right, continuous loop)
 - **Responsive Design** - Mobile-first approach
@@ -12,7 +12,7 @@ A professional and responsive website for **KNS (Knowledge Network Systems)** bu
 - **Multiple Sections**: About, Services, Training, Partners, Testimonials, Contact
 - **Authentication Pages** - Sign up and Login
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Next.js 14** (App Router)
 - **TypeScript**
@@ -20,7 +20,7 @@ A professional and responsive website for **KNS (Knowledge Network Systems)** bu
 - **Framer Motion** (Animations)
 - **Lucide React** (Icons)
 
-## 📦 Installation
+## Installation
 
 1. Install dependencies:
 ```bash
@@ -34,13 +34,13 @@ npm run dev
 
 3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 🎨 Color Scheme
+## Color Scheme
 
 - **Primary Mauve**: `#E0B0FF`
 - **Secondary**: White `#FFFFFF`
 - **Accent**: Charcoal Gray `#333333`
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 /
@@ -66,7 +66,7 @@ npm run dev
     └── globals.css       # Global styles
 ```
 
-## 🖼️ Hero Section Animation
+## Hero Section Animation
 
 The hero section features a **5-image sliding animation** that continuously loops from left to right:
 - Duration: 20 seconds per cycle
@@ -74,7 +74,7 @@ The hero section features a **5-image sliding animation** that continuously loop
 - Loop: Infinite
 - Images: Tech meeting, Data center, Cybersecurity, Cloud computing, IT training
 
-## 🚀 Deployment
+## deployment
 
 Deploy easily on Vercel:
 
@@ -88,14 +88,14 @@ npm i -g vercel
 vercel
 ```
 
-## 📝 Notes
+## Notes
 
 - Images are currently using Unsplash placeholders. Replace with actual company images when available.
 - Partner logos are placeholders. Update with actual partner logos.
 - Contact form submission needs backend integration.
 - Authentication pages are UI-only. Backend integration required for full functionality.
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch
@@ -103,11 +103,10 @@ vercel
 4. Push to the branch
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is proprietary and confidential.
 
----
 
-Built with ❤️ for Knowledge Network Systems
+Built by Eng. Salim Gani for Knowledge Network Systems
 
