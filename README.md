@@ -40,18 +40,6 @@ npm run dev
 - **Secondary**: White `#FFFFFF`
 - **Accent**: Charcoal Gray `#333333`
 
-## Project Structure
-
-```
-
-## Hero Section Animation
-
-The hero section features a **5-image sliding animation** that continuously loops from left to right:
-- Duration: 20 seconds per cycle
-- Direction: Left to right
-- Loop: Infinite
-- Images: Tech meeting, Data center, Cybersecurity, Cloud computing, IT training
-
 ## deployment
 
 Deploy easily on Vercel:
