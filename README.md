@@ -43,28 +43,6 @@ npm run dev
 ## Project Structure
 
 ```
-/
-├── app/
-│   ├── page.tsx          # Home page
-│   ├── about/            # About page
-│   ├── services/         # Services page
-│   ├── training/         # Training page
-│   ├── testimonials/     # Testimonials page
-│   ├── contact/          # Contact page
-│   └── auth/             # Authentication page
-├── components/
-│   ├── Navbar.tsx        # Navigation bar
-│   ├── Hero.tsx          # Hero section with image slider
-│   ├── About.tsx         # About section
-│   ├── Services.tsx      # Services section
-│   ├── Training.tsx      # Training section
-│   ├── Partners.tsx      # Partners section
-│   ├── Testimonials.tsx  # Testimonials carousel
-│   ├── Contact.tsx       # Contact form
-│   └── Footer.tsx        # Footer component
-└── styles/
-    └── globals.css       # Global styles
-```
 
 ## Hero Section Animation
 
